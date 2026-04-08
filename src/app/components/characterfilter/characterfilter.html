@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Filter by House</h1>
+
+  <mat-form-field appearance="fill" class="house-select">
+    <mat-label>Select a House</mat-label>
+    <mat-select [(ngModel)]="selectedHouse" (ngModelChange)="onHouseChange()">
+      <mat-option *ngFor="let house of houses" [value]="house">
+        {{ house }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div *ngIf="loading" class="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="!loading && characters.length === 0 && selectedHouse" class="no-results">
+    <p>No characters found for {{ selectedHouse }}.</p>
+  </div>
+
+  <div *ngIf="!loading && characters.length > 0" class="card-grid">
+    <mat-card *ngFor="let character of characters" class="character-card">
+      <img mat-card-image
+           [src]="character.image || 'assets/placeholder.png'"
+           [alt]="character.name">
+      <mat-card-content>
+        <h2>{{ character.name }}</h2>
+        <p><strong>House:</strong> {{ character.house || 'Unknown' }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

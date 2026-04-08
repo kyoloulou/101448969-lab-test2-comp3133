@@ -1,0 +1,57 @@
+<div class="container">
+  <button mat-raised-button color="primary" routerLink="/" class="back-btn">
+    ← Back to Characters
+  </button>
+
+  <div *ngIf="loading" class="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <mat-card *ngIf="!loading && character" class="detail-card">
+    <div class="card-layout">
+      <img [src]="character.image || 'assets/placeholder.png'"
+           [alt]="character.name"
+           class="character-image">
+
+      <mat-card-content class="details">
+        <h1>{{ character.name }}</h1>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">Species</span>
+            <span>{{ character.species || 'Unknown' }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">House</span>
+            <span>{{ character.house || 'None' }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Wizard</span>
+            <span>{{ character.wizard ? 'Yes' : 'No' }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Ancestry</span>
+            <span>{{ character.ancestry || 'Unknown' }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Actor</span>
+            <span>{{ character.actor || 'Unknown' }}</span>
+          </div>
+
+          <div class="info-item wand-section">
+            <span class="label">Wand</span>
+            <div *ngIf="character.wand">
+              <p><strong>Wood:</strong> {{ character.wand.wood || 'Unknown' }}</p>
+              <p><strong>Core:</strong> {{ character.wand.core || 'Unknown' }}</p>
+              <p><strong>Length:</strong> {{ character.wand.length || 'Unknown' }}</p>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </div>
+  </mat-card>
+
+  <div *ngIf="!loading && !character" class="not-found">
+    <p>Character not found.</p>
+  </div>
+</div>
