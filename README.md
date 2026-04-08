@@ -1,59 +1,56 @@
-# 101448969LabTest2Comp3133
+# 101448969-lab-test2-comp3133
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
+A Harry Potter Characters Explorer built with Angular and Angular Material.
 
-## Development server
+## App Description
+This application allows users to explore Harry Potter characters using the HP API. 
+Users can browse all characters, filter them by Hogwarts house, and view detailed 
+information about each character.
 
-To start a local development server, run:
+## Features Implemented
+- **Character List** - Displays all Harry Potter characters with name, house, and image
+- **Character Filter** - Filter characters by Hogwarts house using a dropdown (Gryffindor, Slytherin, Hufflepuff, Ravenclaw)
+- **Character Details** - View detailed info about a character including species, wand, ancestry, actor and more
+- **Angular Material UI** - Material toolbar, cards, spinner, buttons, and select components
+- **Routing** - Navigation between all pages using Angular Router
+- **HTTP Service** - Dedicated service to fetch data from the HP API
+- **Character Model** - Dedicated interface to define character data structure
 
+## Screenshots
+
+### All Characters Page
+<img width="1912" height="961" alt="Screenshot 2026-04-08 102536" src="https://github.com/user-attachments/assets/d1350635-fc79-4d84-89b7-05eb057260e6" />
+*Displays all Harry Potter characters in a responsive grid*
+
+### Filter by House Page
+<img width="1919" height="902" alt="Screenshot 2026-04-08 102552" src="https://github.com/user-attachments/assets/1430d811-f8d9-4fb5-a4e3-66c882aa177b" />
+*Dropdown to filter characters by Hogwarts house*
+
+### Character Details Page
+<img width="1911" height="896" alt="Screenshot 2026-04-08 103231" src="https://github.com/user-attachments/assets/8e3d7440-5dcc-41e8-84de-0b4f17e9b80f" />
+*Detailed view of a selected character*
+
+## Instructions to Run the Project
+
+### Prerequisites
+- Node.js (v18 or higher)
+- Angular CLI (`npm install -g @angular/cli`)
+
+### Steps
+1. Clone the repository:
 ```bash
-ng serve
+   git clone <your-github-repo-url>
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. Navigate to the project folder:
 ```bash
-ng generate component component-name
+   cd 101448969-lab-test2-comp3133
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+3. Install dependencies:
 ```bash
-ng generate --help
+   npm install
 ```
-
-## Building
-
-To build the project run:
-
+4. Run the application:
 ```bash
-ng build
+   ng serve
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+5. Open your browser and go to:
